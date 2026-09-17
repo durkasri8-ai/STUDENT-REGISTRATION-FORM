@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Registration</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.registration-form input:focus,
+		.registration-form select:focus,
+		.registration-form textarea:focus {
+			border-color: #246b5a;
+			box-shadow: 0 0 0 4px rgba(36, 107, 90, 0.12);
+			outline: none;
+		}
+
+		.required-note {
+			color: #7c5c27;
+			font-size: 0.85rem;
+		}
+	</style>
+</head>
+<body>
+	<main class="page-shell">
+		<section class="intro-panel" aria-labelledby="page-title">
+			<p class="eyebrow">Northfield Academy</p>
+			<h1 id="page-title">Begin your next chapter.</h1>
+			<p class="intro-copy">Complete your student registration and our admissions team will help you take the next step.</p>
+
+			<div class="info-list">
+				<div class="info-item">
+					<span class="info-number">01</span>
+					<div>
+						<strong>Share your details</strong>
+						<span>Tell us a little about yourself.</span>
+					</div>
+				</div>
+				<div class="info-item">
+					<span class="info-number">02</span>
+					<div>
+						<strong>Choose a programme</strong>
+						<span>Find the course that fits your goals.</span>
+					</div>
+				</div>
+				<div class="info-item">
+					<span class="info-number">03</span>
+					<div>
+						<strong>Meet your next opportunity</strong>
+						<span>We will be in touch within two working days.</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="form-panel" aria-labelledby="form-title">
+			<div class="form-heading">
+				<div>
+					<p class="eyebrow">Registration form</p>
+					<h2 id="form-title">Tell us about yourself</h2>
+				</div>
+				<span class="status-badge" style="background-color: #e8f3ee; color: #246b5a;">Open for 2026</span>
+			</div>
+
+			<p class="required-note">Fields marked with * are required.</p>
+
+			<form class="registration-form" action="#" method="post">
+				<div class="form-grid">
+					<div class="field-group">
+						<label for="first-name">First name <span aria-hidden="true">*</span></label>
+						<input type="text" id="first-name" name="first-name" placeholder="e.g.Priya" required>
+					</div>
+					<div class="field-group">
+						<label for="last-name">Last name <span aria-hidden="true">*</span></label>
+						<input type="text" id="last-name" name="last-name" placeholder="e.g.Ravi" required>
+					</div>
+				</div>
+
+				<div class="form-grid">
+					<div class="field-group">
+						<label for="email">Email address <span aria-hidden="true">*</span></label>
+						<input type="email" id="email" name="email" placeholder="you@example.com" required>
+					</div>
+					<div class="field-group">
+						<label for="phone">Phone number</label>
+						<input type="tel" id="phone" name="phone" placeholder="+91" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+					</div>
+				</div>
+
+				<div class="field-group">
+					<label for="programme">Programme of interest <span aria-hidden="true">*</span></label>
+					<select id="programme" name="programme" required>
+						<option value="" selected disabled>Select a course</option>
+						<option value="information-technology">1. INFORMATION TECHNOLOGY</option>
+						<option value="computer-science-engineering">2. COMPUTER SCIENCE ENGINEERING</option>
+						<option value="ece">4. ECE</option>
+						<option value="eee">5. EEE</option>
+                        <option value="coa">6. COMPUTER ORGANIZATION AND ARCHITECTURE</option>
+					</select>
+				</div>
+
+
+				<div class="form-grid">
+					<div class="field-group">
+						<label for="start-date">Preferred start date <span aria-hidden="true">*</span></label>
+						<input type="date" id="start-date" name="start-date" required>
+					</div>
+					<div class="field-group">
+						<label for="study-mode">Study mode <span aria-hidden="true">*</span></label>
+						<select id="study-mode" name="study-mode" required>
+							<option value="" selected disabled>Select mode</option>
+							<option value="full-time">Full-time</option>
+							<option value="part-time">Part-time</option>
+							<option value="online">Online</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="field-group">
+					<label for="message">What would you like to study?</label>
+					<textarea id="message" name="message" rows="4" placeholder="Tell us about your interests and goals..."></textarea>
+				</div>
+
+				<label class="checkbox-label">
+					<input type="checkbox" name="updates" value="yes">
+					<span>I would like to receive programme updates and application guidance.</span>
+				</label>
+
+				<button type="submit" class="submit-button">Submit registration <span aria-hidden="true">&#8594;</span></button>
+				<p class="privacy-note">Your information is kept private and used only to process your registration.</p>
+			</form>
+		</section>
+	</main>
+</body>
+</html>
